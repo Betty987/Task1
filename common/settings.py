@@ -1,4 +1,4 @@
-# Ensure that WIDTH and HEIGHT are multiples of BLOCKSIZE
+
 GAME_WIDTH: int = 300
 GAME_HEIGHT: int = 300
 BLOCK_SIZE: int = 30
@@ -7,8 +7,7 @@ BLOCK_SIZE: int = 30
 GAME_SPEED = 20
 
 # for dqn_model
-# To change model weights, place your .pth file in the '/model/weights' directory 
-# and rename it to either 'cnn_model.pth' or 'mlp_model.pth'
+
 mlp_hidden_layer_size: int = 256
 
 cnn_conv_mid_channels: int = 256

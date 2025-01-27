@@ -1,7 +1,8 @@
-🐍 ## Snake Game 
+
+# 🐍 Snake Game
 This repository contains a Python implementation of the classic Snake Game, where the snake is trained using Reinforcement Learning with the Deep Q-Learning algorithm. The project showcases how artificial intelligence can learn to navigate and optimize its gameplay using neural networks and a reward-based learning framework.
 
-🎯 ## Project Description
+# 🎯 Project Description
 The goal of this project is to train an AI agent to play the Snake game efficiently by:
 
 Maximizing the score by eating food.
@@ -18,7 +19,7 @@ Custom Snake Game Environment: Built using Python and Pygame, the game provides 
 Deep Q-Learning Implementation: Includes a neural network to approximate Q-values, a replay memory buffer, and an epsilon-greedy policy for exploration.
 Training and Evaluation: The agent is trained over multiple episodes, and its performance is evaluated in terms of game score and survivability.
 Video Demo: See the trained AI in action below.
-🧠 ## Algorithm
+# 🧠 Algorithm
 Deep Q-Learning
 Deep Q-Learning (DQL) is a reinforcement learning algorithm that combines Q-Learning with deep neural networks. The agent learns to predict the Q-value of state-action pairs using experience replay and target networks.
 
@@ -43,6 +44,6 @@ Target Network:
 
 A separate neural network periodically updated to stabilize training.
 Training Loop:
-📹 Demo
+# 📹 Demo
 
 

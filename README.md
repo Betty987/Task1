@@ -9,41 +9,43 @@ Maximizing the score by eating food.
 Avoiding collisions with walls or its own body.
 The AI agent uses Deep Q-Learning, a model-free Reinforcement Learning algorithm, to make decisions. Through training, the agent learns from its past actions using a neural network that approximates the optimal Q-values for the game state-action pairs.
 
-This project demonstrates:
 
-The application of reinforcement learning to a real-world sequential decision-making problem.
-The importance of reward engineering in reinforcement learning.
-How Deep Q-Learning works in a grid-based environment like Snake.
-⚙️ Features
-Custom Snake Game Environment: Built using Python and Pygame, the game provides a simple yet robust environment for training the RL agent.
-Deep Q-Learning Implementation: Includes a neural network to approximate Q-values, a replay memory buffer, and an epsilon-greedy policy for exploration.
-Training and Evaluation: The agent is trained over multiple episodes, and its performance is evaluated in terms of game score and survivability.
-Video Demo: See the trained AI in action below.
 # 🧠 Algorithm
-Deep Q-Learning
 Deep Q-Learning (DQL) is a reinforcement learning algorithm that combines Q-Learning with deep neural networks. The agent learns to predict the Q-value of state-action pairs using experience replay and target networks.
 
-Workflow:
-State Representation:
+# File Structure:
+```
+.
+├── agent/
+│ ├── base_agent.py # The base agent class
+│ ├── mlp_agent.py # The agent using MLP and DQN
+│ ├── cnn_agent.py # The agent using CNN and DQN
+│ ├── greedy_agent.py # A simple agent that runs directly towards food
+│ └── play_game_with_agent.py # Reward func, play func, play and learn func
+│
+├── common/
+│ ├── settings.py # Hyperparameters, game size, and game speed
+│ └── utils.py # Helper functions
+│
+├── game/
+│ ├── game_display.py # Game display
+│ ├── game_logic.py # Game logic
+│ ├── main_game.py # Integrates game_display and game_logic
+│ └── states.py # Game state
+│
+├── model/
+│ ├── weights/
+│ │ └── mlp_model.pth # Model weights
+│ │ └── cnn_model.pth # Model weights
+│ └── dqn_model.py # Neural networks
+│
+├── pngs_and_gifs/ # Image folder
+│
+├── main.ipynb # Main program in colab or jupyter notebook.
+│
+└── main.py # Main program, primarily contains user interaction
+```
 
-The state includes information about the snake's position, the location of the food, and the relative positions of obstacles (walls and the snake's own body).
-Reward Function:
-
-Positive reward: Eating food.
-Negative reward: Colliding with a wall or itself.
-Small negative reward: Each step taken without eating food to encourage efficient gameplay.
-Neural Network Architecture:
-
-Input: Current state representation (e.g., snake's position, food location).
-Hidden Layers: Fully connected layers with ReLU activation.
-Output: Q-values for all possible actions (e.g., move up, down, left, right).
-Replay Memory:
-
-Stores past experiences (state, action, reward, next_state, done) to train the neural network with randomly sampled batches.
-Target Network:
-
-A separate neural network periodically updated to stabilize training.
-Training Loop:
 # 📹 Demo
 
 ![alt text](GIF/loss.png)

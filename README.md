@@ -34,7 +34,52 @@ Deep Q-Learning (DQL) is a reinforcement learning algorithm that combines Q-Lear
 │
 |── main.py # Main program, primarily contains user interaction
 ```
-
+# 👾 Game Structure:
+ """   
+    Start
+    │
+    └─── Choose agent type
+        │
+        ├─── (a) MLP Agent
+        │
+        └─── (b) CNN Agent
+            │
+            └─── Choose mode
+                │
+                ├─── (a) Play
+                │   │
+                │   └─── Load previous model
+                │       │
+                │       ├─── Success
+                │       │   └─── Play with loaded model
+                │       │
+                │       └─── Fail
+                │           │
+                │           └─── Continue without loaded model?
+                │               │
+                │               ├─── (a) Return to mode selection
+                │               │
+                │               └─── (b) Play with untrained model
+                │
+                └─── (b) Learn and Play
+                    │
+                    └─── Start training from scratch?
+                        │
+                        ├─── (a) Load previous model
+                        │   │
+                        │   ├─── Success
+                        │   │   └─── Play and learn with loaded model
+                        │   │
+                        │   └─── Fail
+                        │       │
+                        │       └─── Continue without loaded model?
+                        │           │
+                        │           ├─── (a) Return to mode selection 
+                        │           │
+                        │           └─── (b) Training from scratch
+                        │
+                        └─── (b) Start new training
+    """
 # 📹 Demo
 
 ![alt text](GIF/loss.png)

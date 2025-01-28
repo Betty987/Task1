@@ -46,4 +46,5 @@ A separate neural network periodically updated to stabilize training.
 Training Loop:
 # 📹 Demo
 
-
+![alt text](pngs_and_gifs/loss.png)
+![alt text](pngs_and_gifs/snaker.gif)

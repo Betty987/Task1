@@ -35,7 +35,7 @@ Deep Q-Learning (DQL) is a reinforcement learning algorithm that combines Q-Lear
 |── main.py # Main program, primarily contains user interaction
 ```
 # 👾 Game Structure:
-   ``` 
+``` 
     Start
     │
     └─── Choose agent type
@@ -79,7 +79,8 @@ Deep Q-Learning (DQL) is a reinforcement learning algorithm that combines Q-Lear
                         │           └─── (b) Training from scratch
                         │
                         └─── (b) Start new training
-    ```
+
+```
 # 📹 Demo
 
 ![alt text](GIF/loss.png)

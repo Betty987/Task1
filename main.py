@@ -6,51 +6,6 @@ from agent.mlp_agent import MLPAgent
 from agent.cnn_agent import CNNAgent
 
 def main():
-    """   
-    Start
-    │
-    └─── Choose agent type
-        │
-        ├─── (a) MLP Agent
-        │
-        └─── (b) CNN Agent
-            │
-            └─── Choose mode
-                │
-                ├─── (a) Play
-                │   │
-                │   └─── Load previous model
-                │       │
-                │       ├─── Success
-                │       │   └─── Play with loaded model
-                │       │
-                │       └─── Fail
-                │           │
-                │           └─── Continue without loaded model?
-                │               │
-                │               ├─── (a) Return to mode selection
-                │               │
-                │               └─── (b) Play with untrained model
-                │
-                └─── (b) Learn and Play
-                    │
-                    └─── Start training from scratch?
-                        │
-                        ├─── (a) Load previous model
-                        │   │
-                        │   ├─── Success
-                        │   │   └─── Play and learn with loaded model
-                        │   │
-                        │   └─── Fail
-                        │       │
-                        │       └─── Continue without loaded model?
-                        │           │
-                        │           ├─── (a) Return to mode selection 
-                        │           │
-                        │           └─── (b) Training from scratch
-                        │
-                        └─── (b) Start new training
-    """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     if select_action("Choose agent type:\n(a) MLP Agent\n(b) CNN Agent"):

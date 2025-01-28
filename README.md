@@ -7,7 +7,8 @@ Deep Q-Learning (DQL) is a reinforcement learning algorithm that combines Q-Lear
 
 # 📂 File Structure:
 ```
-.
+|── GIF/ # plots and gifs
+|
 ├── agent/
 │ ├── base_agent.py # The base agent class
 │ ├── mlp_agent.py # The agent using MLP and DQN
@@ -31,9 +32,7 @@ Deep Q-Learning (DQL) is a reinforcement learning algorithm that combines Q-Lear
 │ │ └── cnn_model.pth # Model weights
 │ └── dqn_model.py # Neural networks
 │
-├── GIF/ # plots and gifs
-│
-├── main.py # Main program, primarily contains user interaction
+|── main.py # Main program, primarily contains user interaction
 ```
 
 # 📹 Demo
